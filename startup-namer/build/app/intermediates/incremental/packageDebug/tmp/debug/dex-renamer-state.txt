@@ -1,0 +1,4 @@
+#Mon Jul 26 20:37:38 JST 2021
+base.0=/Users/jiyounha/development/startup_namer/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
