@@ -41,4 +41,15 @@ class DatabaseHandler {
       whereArgs: [id],
     );
   }
+
+  Future<void> test() async {
+    final db = await initializeDB();
+  }
+
+  Future<void> getDatabasePath() async {
+    final Database db = await initializeDB();
+    // var dataDirectory = await getDatabasesPath();
+    String dbPath = join(db.path, 'example.db');
+    print('db location : '+dbPath);
+  }
 }

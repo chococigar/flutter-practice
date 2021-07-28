@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sqlite_practice/model/user.dart';
 import 'package:sqlite_practice/services/database_handler.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:path/path.dart';
 
 void main() {
   runApp(MyApp());
@@ -41,6 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
     this.handler.initializeDB().whenComplete(() async {
       await this.addUsers();
       setState(() {});
+      await this.handler.getDatabasePath();
     });
   }
 
@@ -75,8 +78,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Card(
                       child: ListTile(
                         contentPadding: EdgeInsets.all(8.0),
-                        title: Text(snapshot.data![index].name),
-                        subtitle: Text(snapshot.data![index].age.toString()),
+                        title: Text(snapshot.data![index].name + ' hola'),
+                        subtitle: Text(snapshot.data![index].age.toString() + ' yrs old'),
                       )),
                 );
               },
@@ -93,6 +96,10 @@ class _MyHomePageState extends State<MyHomePage> {
     User firstUser = User(name: "peter", age: 24, country: "Lebanon");
     User secondUser = User(name: "john", age: 31, country: "United Kingdom");
     List<User> listOfUsers = [firstUser, secondUser];
+    print('printing from addUsers');
     return await this.handler.insertUser(listOfUsers);
   }
 }
+
+
+
