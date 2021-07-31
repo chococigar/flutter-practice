@@ -63,6 +63,7 @@ class ProfileWidget extends StatelessWidget {
     required Color color,
   }) =>
       Container(
+          padding: EdgeInsets.all(all),
           color: color,
           child: child,
       );
