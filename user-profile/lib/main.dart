@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:user_profile/page/edit_profile_page.dart';
 import 'package:user_profile/page/profile_page.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.blue.shade300,
         dividerColor: Colors.black,
       ),
-      home: ProfilePage(),
+      home: EditProfilePage(),
       // debugShowCheckedModeBanner: false,
     );
   }
