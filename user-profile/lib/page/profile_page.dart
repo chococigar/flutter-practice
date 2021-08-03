@@ -7,6 +7,7 @@ import 'package:user_profile/widget/numbers_widget.dart';
 import 'package:user_profile/widget/profile_widget.dart';
 
 import '../appbar_widget.dart';
+import 'edit_profile_page.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -26,7 +27,11 @@ class _ProfilePageState extends State<ProfilePage> {
           ProfileWidget(
           imagePath:
             user.imagePath,
-            onClicked: () async {},
+            onClicked: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => EditProfilePage()),
+              );
+            },
           ),
           const SizedBox(height: 24),
           buildName(user),
