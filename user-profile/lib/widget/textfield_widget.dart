@@ -17,7 +17,8 @@ class TextFieldWidget extends StatefulWidget {
 }
 
 class _TextFieldWidgetState extends State<TextFieldWidget> {
-  late final TextEditingController controller;
+  // late final TextEditingController controller;
+  TextEditingController controller = TextEditingController();
 
   @override
   void initState(){
