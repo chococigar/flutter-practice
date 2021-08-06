@@ -1,0 +1,136 @@
+PODS:
+  - Amplify (1.4.3):
+    - Amplify/Default (= 1.4.3)
+  - Amplify/Default (1.4.3)
+  - amplify_analytics_pinpoint (0.0.1):
+    - Amplify
+    - amplify_core
+    - AmplifyPlugins/AWSPinpointAnalyticsPlugin
+    - Flutter
+  - amplify_auth_cognito (0.0.1):
+    - Amplify
+    - amplify_core
+    - AmplifyPlugins/AWSCognitoAuthPlugin
+    - Flutter
+    - ObjectMapper
+  - amplify_core (0.0.1):
+    - Flutter
+  - amplify_flutter (0.0.1):
+    - Amplify
+    - amplify_core
+    - AmplifyPlugins/AWSCognitoAuthPlugin
+    - AWSPluginsCore
+    - Flutter
+  - amplify_storage_s3 (0.0.1):
+    - Amplify
+    - amplify_core
+    - AmplifyPlugins/AWSS3StoragePlugin
+    - Flutter
+  - AmplifyPlugins/AWSCognitoAuthPlugin (1.4.3):
+    - AWSAuthCore (~> 2.19.0)
+    - AWSCognitoIdentityProvider (~> 2.19.0)
+    - AWSCognitoIdentityProviderASF (~> 2.19.0)
+    - AWSCore (~> 2.19.0)
+    - AWSMobileClient (~> 2.19.0)
+    - AWSPluginsCore (= 1.4.3)
+  - AmplifyPlugins/AWSPinpointAnalyticsPlugin (1.4.3):
+    - AWSCore (~> 2.19.0)
+    - AWSPinpoint (~> 2.19.0)
+    - AWSPluginsCore (= 1.4.3)
+  - AmplifyPlugins/AWSS3StoragePlugin (1.4.3):
+    - AWSCore (~> 2.19.0)
+    - AWSPluginsCore (= 1.4.3)
+    - AWSS3 (~> 2.19.0)
+  - AWSAuthCore (2.19.1):
+    - AWSCore (= 2.19.1)
+  - AWSCognitoIdentityProvider (2.19.1):
+    - AWSCognitoIdentityProviderASF (= 2.19.1)
+    - AWSCore (= 2.19.1)
+  - AWSCognitoIdentityProviderASF (2.19.1)
+  - AWSCore (2.19.1)
+  - AWSMobileClient (2.19.1):
+    - AWSAuthCore (= 2.19.1)
+    - AWSCognitoIdentityProvider (= 2.19.1)
+    - AWSCognitoIdentityProviderASF (= 2.19.1)
+    - AWSCore (= 2.19.1)
+  - AWSPinpoint (2.19.1):
+    - AWSCore (= 2.19.1)
+  - AWSPluginsCore (1.4.3):
+    - Amplify (= 1.4.3)
+    - AWSCore (~> 2.19.0)
+    - AWSMobileClient (~> 2.19.0)
+  - AWSS3 (2.19.1):
+    - AWSCore (= 2.19.1)
+  - camera (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+  - ObjectMapper (4.2.0)
+  - path_provider (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - amplify_analytics_pinpoint (from `.symlinks/plugins/amplify_analytics_pinpoint/ios`)
+  - amplify_auth_cognito (from `.symlinks/plugins/amplify_auth_cognito/ios`)
+  - amplify_core (from `.symlinks/plugins/amplify_core/ios`)
+  - amplify_flutter (from `.symlinks/plugins/amplify_flutter/ios`)
+  - amplify_storage_s3 (from `.symlinks/plugins/amplify_storage_s3/ios`)
+  - camera (from `.symlinks/plugins/camera/ios`)
+  - Flutter (from `Flutter`)
+  - path_provider (from `.symlinks/plugins/path_provider/ios`)
+
+SPEC REPOS:
+  trunk:
+    - Amplify
+    - AmplifyPlugins
+    - AWSAuthCore
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
+    - AWSCore
+    - AWSMobileClient
+    - AWSPinpoint
+    - AWSPluginsCore
+    - AWSS3
+    - ObjectMapper
+
+EXTERNAL SOURCES:
+  amplify_analytics_pinpoint:
+    :path: ".symlinks/plugins/amplify_analytics_pinpoint/ios"
+  amplify_auth_cognito:
+    :path: ".symlinks/plugins/amplify_auth_cognito/ios"
+  amplify_core:
+    :path: ".symlinks/plugins/amplify_core/ios"
+  amplify_flutter:
+    :path: ".symlinks/plugins/amplify_flutter/ios"
+  amplify_storage_s3:
+    :path: ".symlinks/plugins/amplify_storage_s3/ios"
+  camera:
+    :path: ".symlinks/plugins/camera/ios"
+  Flutter:
+    :path: Flutter
+  path_provider:
+    :path: ".symlinks/plugins/path_provider/ios"
+
+SPEC CHECKSUMS:
+  Amplify: 45e6a71e421e454eb075b160a74e67443af11e76
+  amplify_analytics_pinpoint: df3010eb49161ada82712a6b74d3f77296ac561e
+  amplify_auth_cognito: 2e090a788d0ba4e08f6438170b1e7aac872782b4
+  amplify_core: 8b38d20089fe4f225c14db6892f586bd03824a42
+  amplify_flutter: d64b45e3a016e491bbb2e110fee57e150daf2164
+  amplify_storage_s3: 784469070ec70527454e540ef0d501498f58927a
+  AmplifyPlugins: 8ca498863cd0c59c96f2c13bc23ddfc431a852c8
+  AWSAuthCore: 387c5e3482edbbb0fe754fa110a2a0203c783432
+  AWSCognitoIdentityProvider: e6932c709d3e0b234128aeb5f2052c9bf1032d8d
+  AWSCognitoIdentityProviderASF: 749f58b75e69f7f0144b9d38539525562b843d34
+  AWSCore: 55c154ae27efc5c98bdc30a0eeea5a35d10a2ab5
+  AWSMobileClient: b908cada3c35da9cfe5b4ff9947fcf70142495e7
+  AWSPinpoint: 8c07b9759eebe269a5b26d38a96f5ecd5478b1fb
+  AWSPluginsCore: 816e590a9ad57570b14e14f5888dbc7845936683
+  AWSS3: 2272253b098d07803af8dd20ce6ce7302bcffb47
+  camera: a0ca5080336f7af47b88436e5e26da3dee5568f0
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
+
+PODFILE CHECKSUM: cc1f88378b4bfcf93a6ce00d2c587857c6008d3b
+
+COCOAPODS: 1.10.0
