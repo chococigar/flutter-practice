@@ -1,0 +1,71 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-flutterphotos-dev-210655-authRole",
+      "UnauthRoleArn": "arn:aws:iam::156943171561:role/amplify-flutterphotos-dev-210655-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::156943171561:role/amplify-flutterphotos-dev-210655-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-flutterphotos-dev-210655-deployment",
+      "UnauthRoleName": "amplify-flutterphotos-dev-210655-unauthRole",
+      "StackName": "amplify-flutterphotos-dev-210655",
+      "StackId": "arn:aws:cloudformation:us-east-2:156943171561:stack/amplify-flutterphotos-dev-210655/cdb7cf90-f6ae-11eb-87b9-066d8c4ab9d2",
+      "AmplifyAppId": "dcbmrjnicm97y"
+    }
+  },
+  "auth": {
+    "flutterphotos13ef10e3": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-flutterphotos-dev-210655-deployment/amplify-cfn-templates/auth/flutterphotos13ef10e3-cloudformation-template.yml",
+        "logicalId": "authflutterphotos13ef10e3"
+      },
+      "lastPushTimeStamp": "2021-08-06T12:11:31.444Z",
+      "output": {
+        "AppClientSecret": "1jrtr07i0dni7cg3gnsl5d73qqkr1nsjd2b29rea91f5m4igtmbs",
+        "UserPoolId": "us-east-2_mcGajJ7gU",
+        "AppClientIDWeb": "40hfl3m0h6i0k8sdebbsnlb1qn",
+        "AppClientID": "5uqadndb0ipsjg2n7b0hbcdnne",
+        "IdentityPoolId": "us-east-2:479ed400-34af-401f-86c8-823c02eef22d",
+        "IdentityPoolName": "flutterphotos13ef10e3_identitypool_13ef10e3__dev",
+        "UserPoolName": "flutterphotos13ef10e3_userpool_13ef10e3"
+      },
+      "lastPushDirHash": "LsqeZtSMZxr+KMjGTcxoI4Tb8B4="
+    }
+  },
+  "analytics": {
+    "flutterphotos": {
+      "service": "Pinpoint",
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-flutterphotos-dev-210655-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
+        "logicalId": "analyticsflutterphotos"
+      },
+      "lastPushTimeStamp": "2021-08-06T12:11:31.444Z",
+      "output": {
+        "appName": "flutterphotos-dev",
+        "Region": "us-east-1",
+        "Id": "1a90cffc844e4967a90ec0a8491f1db3"
+      },
+      "lastPushDirHash": "3OSovH5cVO/WgmxwzxkT6Yo3hbY="
+    }
+  },
+  "storage": {
+    "s3d9c61dca": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-flutterphotos-dev-210655-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+        "logicalId": "storages3d9c61dca"
+      },
+      "lastPushTimeStamp": "2021-08-06T12:11:31.444Z",
+      "output": {
+        "BucketName": "flutterphotos1882ae338e4f44709dc277cbfa238067210655-dev",
+        "Region": "us-east-2"
+      },
+      "lastPushDirHash": "7hyzYWVWDRnm5GaSOREVRTtm6Ec="
+    }
+  }
+}
