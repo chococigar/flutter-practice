@@ -167,11 +167,27 @@ class TodoItem extends StatelessWidget {
   TodoItem({required this.todo});
 
   void _deleteTodo(BuildContext context) async {
-    // to be filled in a later step
+    try {
+      // to delete data from DataStore, we pass the model instance to
+      // Amplify.DataStore.delete()
+      await Amplify.DataStore.delete(todo);
+    } catch (e) {
+      print('An error occurred while deleting Todo: $e');
+    }
   }
 
   Future<void> _toggleIsComplete() async {
-    // to be filled in a later step
+
+    // copy the Todo we wish to update, but with updated properties
+    Todo updatedTodo = todo.copyWith(isComplete: !todo.isComplete);
+    try {
+
+      // to update data in DataStore, we again pass an instance of a model to
+      // Amplify.DataStore.save()
+      await Amplify.DataStore.save(updatedTodo);
+    } catch (e) {
+      print('An error occurred while saving Todo: $e');
+    }
   }
 
   @override
