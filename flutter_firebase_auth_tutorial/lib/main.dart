@@ -5,6 +5,8 @@ import 'package:firebase_authentication_tutorial/sign_in_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'dart:developer';
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,6 +17,7 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    log("myapp main");
     return MultiProvider(
       providers: [
         Provider<AuthenticationService>(
@@ -42,6 +45,7 @@ class AuthenticationWrapper extends StatelessWidget {
     final firebaseUser = context.watch<User>();
 
     if (firebaseUser != null) {
+      log('data: IS FIREBASE USER');
       return HomePage();
     }
     return SignInPage();

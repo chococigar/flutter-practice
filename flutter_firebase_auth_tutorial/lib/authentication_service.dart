@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'dart:developer';
 
 class AuthenticationService {
   final FirebaseAuth _firebaseAuth;
-
   AuthenticationService(this._firebaseAuth);
 
   /// Changed to idTokenChanges as it updates depending on more cases.
@@ -12,6 +12,7 @@ class AuthenticationService {
   /// Navigator.of(context).pushNamedAndRemoveUntil('/', (Route<dynamic> route) => false);
   /// after you called this method if you want to pop all routes.
   Future<void> signOut() async {
+    log("signing out");
     await _firebaseAuth.signOut();
   }
 
@@ -20,6 +21,7 @@ class AuthenticationService {
   /// use your own custom class that would take the exception and return better
   /// error messages. That way you can throw, return or whatever you prefer with that instead.
   Future<String> signIn({String email, String password}) async {
+    log("signing in");
     try {
       await _firebaseAuth.signInWithEmailAndPassword(email: email, password: password);
       return "Signed in";
@@ -33,6 +35,7 @@ class AuthenticationService {
   /// use your own custom class that would take the exception and return better
   /// error messages. That way you can throw, return or whatever you prefer with that instead.
   Future<String> signUp({String email, String password}) async {
+    log("signing up");
     try {
       await _firebaseAuth.createUserWithEmailAndPassword(email: email, password: password);
       return "Signed up";
