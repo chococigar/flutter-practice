@@ -23,7 +23,7 @@ class SignInPage extends StatelessWidget {
               labelText: "Password",
             ),
           ),
-          RaisedButton(
+          ElevatedButton(
             onPressed: () {
               context.read<AuthenticationService>().signIn(
                     email: emailController.text.trim(),
