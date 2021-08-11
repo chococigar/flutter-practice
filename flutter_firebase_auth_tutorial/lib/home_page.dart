@@ -14,6 +14,7 @@ class HomePage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 context.read<AuthenticationService>().signOut();
+                _navigateToFirstPage(context);
               },
               child: Text("Sign out"),
             ),
@@ -21,5 +22,10 @@ class HomePage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  // usage: signout in any case
+  void _navigateToFirstPage(BuildContext context) {
+    Navigator.of(context).popUntil((route) => route.isFirst);
   }
 }

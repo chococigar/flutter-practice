@@ -1,9 +1,11 @@
 import 'package:firebase_authentication_tutorial/authentication_service.dart';
-import 'package:firebase_authentication_tutorial/sign_up_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class SignInPage extends StatelessWidget {
+import 'home_page.dart';
+
+class SignUpPage extends StatelessWidget {
+  final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
@@ -12,6 +14,12 @@ class SignInPage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
+          TextField(
+            controller: nameController,
+            decoration: InputDecoration(
+              labelText: "Name",
+            ),
+          ),
           TextField(
             controller: emailController,
             decoration: InputDecoration(
@@ -26,16 +34,17 @@ class SignInPage extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {
-              context.read<AuthenticationService>().signIn(
-                    email: emailController.text.trim(),
-                    password: passwordController.text.trim(),
-                  );
+              Navigator.pop(context);
             },
-            child: Text("Sign in"),
+            child: Text("Back to login"),
           ),
           ElevatedButton(
             onPressed: () {
-              _navigateToSignUpPage(context);
+              context.read<AuthenticationService>().signUp(
+                email: emailController.text.trim(),
+                password: passwordController.text.trim(),
+              );
+              _navigateToHomePage(context);
             },
             child: Text("Sign up"),
           )
@@ -44,11 +53,11 @@ class SignInPage extends StatelessWidget {
     );
   }
 
-  // usage: signin page --> signup page
-  void _navigateToSignUpPage(BuildContext context) {
+  // signed out --> signin in any case
+  void _navigateToHomePage(BuildContext context) {
     Navigator.of(context).push(
         MaterialPageRoute(
-            builder: (context) => SignUpPage()
+            builder: (context) => HomePage()
         )
     );
   }

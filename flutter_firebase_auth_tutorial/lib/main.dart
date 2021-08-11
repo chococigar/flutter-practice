@@ -44,10 +44,12 @@ class AuthenticationWrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     final firebaseUser = context.watch<User>();
 
+    /*
     if (firebaseUser != null) {
       log('data: IS FIREBASE USER');
       return HomePage();
     }
+    */
     return SignInPage();
   }
 }
