@@ -14,6 +14,8 @@ Future<void> main() async {
 }
 
 class MyApp extends StatelessWidget {
+  static final String title = 'Todo App With Firebase';
+
   @override
   Widget build(BuildContext context) {
     log("myapp main");
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
         )
       ],
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: title,
         theme: ThemeData(
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -42,6 +44,7 @@ class AuthenticationWrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final firebaseUser = context.watch<User>();
+    log("back in main.dart authentication wrapper");
 
     /*
     if (firebaseUser != null) {

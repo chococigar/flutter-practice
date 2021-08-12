@@ -21,13 +21,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final tabs = [
-      // TodoListWidget(),
-      // CompletedListWidget(),
+      TodoListWidget(),
+      CompletedListWidget(),
     ];
 
     return Scaffold(
       appBar: AppBar(
-        // title: Text(MyApp.title),
+        title: Text(MyApp.title),
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Theme
@@ -98,14 +98,3 @@ Widget buildText(String text) => Center(
     style: TextStyle(fontSize: 24, color: Colors.white),
   ),
 );
-
-
-/*
-            ElevatedButton(
-              onPressed: () {
-                context.read<AuthenticationService>().signOut();
-                _navigateToFirstPage(context);
-              },
-              child: Text("Sign out"),
-            ),
- */
