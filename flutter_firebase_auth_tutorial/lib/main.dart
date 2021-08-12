@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_authentication_tutorial/authentication_service.dart';
-import 'package:firebase_authentication_tutorial/home_page.dart';
-import 'package:firebase_authentication_tutorial/sign_in_page.dart';
+import 'package:firebase_authentication_tutorial/page/sign_in_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
